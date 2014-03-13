@@ -90,7 +90,12 @@
 	<gap:plugin name="org.apache.cordova.dialogs" />
 	<gap:plugin name="org.apache.cordova.vibration" />
 	<gap:plugin name="org.apache.cordova.splashscreen" />
-    <!--
+  
+  <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+  <feature name="http://api.phonegap.com/1.0/camera"/>
+  <feature name="http://api.phonegap.com/1.0/file"/>  
+  
+  <!--
         Define access to external domains.
 
         <access />            - a blank access tag denies access to all external resources.

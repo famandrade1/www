@@ -19,6 +19,7 @@
         // device APIs are available
         //
         function onDeviceReady() {
+
             pictureSource = navigator.camera.PictureSourceType;
             destinationType = navigator.camera.DestinationType;
             alert("entrei no método onDeviceReady");
@@ -71,10 +72,29 @@
         function capturePhoto() {
             // Take picture using device camera and retrieve image as base64-encoded string
             alert("entrei no método capturePhoto");
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-                destinationType: destinationType.DATA_URL
-            });
+
+
+            try {
+                navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+                    destinationType: destinationType.DATA_URL
+                });
+
+            }
+
+            catch (err) {
+                var txt = "";
+
+                txt = err.message;
+
+                alert(txt);
+
+            }
+
         }
+
+
+
+
 
         // A button will call this function
         //
@@ -107,9 +127,10 @@
 </head>
 <body>
     <div data-role="page">
-    <div data-role="head">
-        <h1>Media Teste</h1>
-    </div>
+        <div data-role="head">
+            <h1>
+                Media Teste</h1>
+        </div>
         <div data-role="content">
             <button onclick="capturePhoto();">
                 Capture Photo</button>

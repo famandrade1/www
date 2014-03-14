@@ -21,7 +21,11 @@
         The "device" permission is required for the 'deviceready' event.
     -->
     <feature name="http://api.phonegap.com/1.0/device" />
-        
+    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>    
     <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
@@ -89,11 +93,7 @@
 	<gap:plugin name="org.apache.cordova.network-information" />
 	<gap:plugin name="org.apache.cordova.dialogs" />
 	<gap:plugin name="org.apache.cordova.vibration" />
-	<gap:plugin name="org.apache.cordova.splashscreen" />
-  
-  <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
-  <feature name="http://api.phonegap.com/1.0/camera"/>
-  <feature name="http://api.phonegap.com/1.0/file"/>  
+	<gap:plugin name="org.apache.cordova.splashscreen" />       
   
   <!--
         Define access to external domains.
